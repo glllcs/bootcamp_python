@@ -58,9 +58,9 @@ def add_r(name, ingr, meal, time):
 
 print('\n' + 21*'~', "Lucas' Cookbook", 21*'~')
 while True:
-    print('Please select an option by typing the corresponding number:\n\
-1: Add a recipe\n2: Delete a recipe\n3: Print a recipe\n\
-4: Print the cookbook\n5: Quit')
+    print('Please select an option by typing the corresponding number:\n'
+          '1: Add a recipe\n2: Delete a recipe\n3: Print a recipe\n'
+          '4: Print the cookbook\n5: Quit')
     option = input('>> ')
     if option == '1':
         print("\nPlease enter the new recipe's name:")
@@ -90,6 +90,6 @@ while True:
         print('Cookbook closed.')
         exit()
     else:
-        print('\nThis option does not exist,\
-please type the corresponding number.')
+        print('\nThis option does not exist, please type the corresponding'
+              ' number.')
         print('To exit, enter 5.\n')
