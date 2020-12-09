@@ -18,16 +18,17 @@ while (True):
     except ValueError:
         print("That's not a number.")
         continue
-    if n_guess == 1 and num == 42 and guess == 42:
-        print("The answer to the ultimate question of life, the universe "
-              "and everything is 42.\nCongratulations! You got it on your "
-              "first try!")
-        exit()
-    elif guess == num:
-        print("Congratulations, you've got it!\nYou won in %d attempts!"
-              % n_guess)
-        exit()
+    if guess > num:
+        print("Too high!")
     elif guess < num:
         print("Too low!")
     else:
-        print("Too high!")
+        if num == 42:
+            print("The answer to the ultimate question of life, the universe "
+                  "and everything is 42.")
+        if n_guess == 1:
+            print("Congratulations! You got it on your first try!")
+        else:
+            print("Congratulations, you've got it!\nYou won in %d attempts!"
+                  % n_guess)
+        exit()
