@@ -81,7 +81,6 @@ class Matrix:
         else:
             raise ValueError("A matrix can only be subtracted from another "
                              "matrix")
-        return new
 
     def __rsub__(self, second):
         raise ValueError(f"A {type(second)} cannot be subtracted by a matrix")
