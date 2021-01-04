@@ -1,0 +1,16 @@
+from the_bank import Account, Bank
+
+bank = Bank()
+print(bank)
+bank.add(Account("Lucas", value=100, zip=123, addr=11))
+print(bank)
+bank.add(Account("Bob", value=0, zip=123, addr=11))
+print(bank)
+bank.transfer(1, "Bob", 20)
+print(bank)
+bank.transfer("Bob", "Lucas", 10)
+print(bank)
+bank.add(Account("Zozo", base=43, cici=8))
+print(bank)
+bank.fix_account("Zozo")
+print(bank)
