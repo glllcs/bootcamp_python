@@ -1,6 +1,7 @@
 from typing import List, Union
 from functools import reduce
 from math import sqrt
+from operator import add
 
 
 class TinyStatistician:
@@ -57,12 +58,11 @@ class TinyStatistician:
         if nbr_list == None:
             return None
         mean = self.mean(nbr_list)
+        
+        sum_squares = reduce(add, map(lambda nbr: pow((nbr - mean), 2), nbr_list))
+        var = sum_squares / len(nbr_list)
 
-        var = 0
-        for nbr in nbr_list:
-            var += pow((nbr - mean), 2)
-
-        return var / len(nbr_list)
+        return var
 
     def std(self, nbr_list: List = None) -> Union[float, None]:
         """
